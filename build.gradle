@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+    }
+}
+
+plugins {
+    id 'java'
+    id 'maven'
+    id 'application'
+    id 'groovy'
+    id 'jacoco'
+}
+group 'com.vreddy'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+group 'com.vreddy'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.hazelcast:hazelcast-all:3.8.3'
+    // tag::jetty[]
+    compile("org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE")
+    // end::jetty[]
+    // tag::actuator[]
+    compile("org.springframework.boot:spring-boot-starter-actuator:1.4.0.RELEASE")
+}
