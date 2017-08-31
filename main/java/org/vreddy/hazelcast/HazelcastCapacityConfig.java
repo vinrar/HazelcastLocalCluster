@@ -186,7 +186,7 @@ public class HazelcastConfig {
     private MapConfig getMapConfig(String mapName) {
         MapConfig mapConfig = new MapConfig();
         mapConfig.setName(mapName);
-        mapConfig.setInMemoryFormat(InMemoryFormat.BINARY);
+        mapConfig.setInMemoryFormat(InMemoryFormat.OBJECT);
         mapConfig.setBackupCount(0);
         mapConfig.setAsyncBackupCount(1);
         mapConfig.getMaxSizeConfig().setSize(goaMapMaxEntryPerNode)
